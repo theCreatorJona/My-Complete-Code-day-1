@@ -10,6 +10,8 @@ class Portal{
     
     int map;
     
+    boolean isActivate = false;
+    
     Portal(String name, int id, int x, int y, int w, int h, int map){
         this.namePortal = name;
         this.idPortal = id;
@@ -19,5 +21,12 @@ class Portal{
         this.height = h;
         this.map = map;
     }
-
+    /*
+    boolean portalIsActivate(Player player){
+        if ( player.xPlayer <= this.xPortal && player.yPlayer <= this.yPortal && player.xPlayer >= ){
+            System.out.println("TEST: estas dentro del portal!");
+            return isActivate = true;
+        }
+    return false;
+    }*/
 }
