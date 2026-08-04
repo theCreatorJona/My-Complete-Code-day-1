@@ -11,7 +11,7 @@ public class Main{
         
         Player player = new Player("Jonathan", 300.0f);
         
-        while (true){
+        while (!player.quitPlayer){
             
             if (player.roomPlayer.equals(Room.MENU)){
                 System.out.println("At the menu!");
