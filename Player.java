@@ -12,6 +12,7 @@ class Player{
     int goldPlayer = 0;
     
     String actionPlayer = "";
+    boolean quitPlayer = false;
     
     // attribute in game
     
