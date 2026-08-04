@@ -1,12 +1,12 @@
 package com.jonaaagiz.miApp;
 
 class Player{
-				  static int id = 0;
+    static int id = 0;
 				  
-				  // attribute stadistic
-				  int idPlayer;
-				  String namePlayer;
-				  float speedPlayer;
+    // attribute stadistic
+	int idPlayer;
+	String namePlayer;
+	float speedPlayer;
     
     int goldPlayer = 0;
 				  
@@ -20,15 +20,15 @@ class Player{
     boolean isRunningPlayer =  false;
     
 				  Player(String name, float speed){
-				  				  id++;
-				  				  this.idPlayer = id;
-				  				  this.namePlayer = name;
-				  				  this.speedPlayer = speed;
+				      id++;
+				  	  this.idPlayer = id;
+				  	  this.namePlayer = name;
+				  	  this.speedPlayer = speed;
 				  }
 				  
 				  void informationPlayer(){
 				      System.out.println("id: " + this.idPlayer);
-				  				  System.out.println("Name: " + this.namePlayer);
+				      System.out.println("Name: " + this.namePlayer);
 				      System.out.println("Speed: " + this.speedPlayer);
 				      System.out.println("Is Running: " + this.isRunningPlayer);
 				      System.out.println("X: " + this.xPlayer); 
