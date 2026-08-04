@@ -1,64 +1,41 @@
-package com.jonaaagiz.miApp;
 
-class Player{
-    static int id = 0;
-				  
-    // attribute stadistic
-	int idPlayer;
-	String namePlayer;
-	float speedPlayer;
-    
-    int goldPlayer = 0;
-				  
-    // attribute in game
-    
-    int xPlayer = 0;
-    int yPlayer = 0;
-    
-    int energyPlayer = 100;
-    float runSpeedPlayer = 400;
-    boolean isRunningPlayer =  false;
-    
-	Player(String name, float speed){
-		id++;
-	    this.idPlayer = id;
-		this.namePlayer = name;
-		this.speedPlayer = speed;
-	}
-				  
-	void informationPlayer(){
-        System.out.println("id: " + this.idPlayer);
-		System.out.println("Name: " + this.namePlayer);
-	    System.out.println("Speed: " + this.speedPlayer);
-		System.out.println("Is Running: " + this.isRunningPlayer);
-		System.out.println("X: " + this.xPlayer); 
-		System.out.println("Y: " + this.yPlayer);
-	}
-    
-    // method in game
-    void runningPlayer(){
-        if (isRunningPlayer == true){
-            this.speedPlayer = this.runSpeedPlayer;
-        }
-        
-    }
-    
-    
-				
-}
+import java.util.Scanner;
 
 
 public class Main{
+            
     public static void main(String[] args){
         
+        Scanner input = new Scanner(System.in);
         
         Player p1 = new Player("Jonathan", 300.0f);
-        p1.informationPlayer();
         
-        
-        
+        while (true){
+            
+            if (p1.roomPlayer.equals(Room.MENU)){
+                System.out.println("At the menu!");
+                System.out.print("Chose the mode: ");
+                p1.actionPlayer = input.nextLine();
+                p1.changeModePlayer(p1.actionPlayer);
+                
+            }
+            if (p1.roomPlayer.equals(Room.GAME)){
+                
+                p1.informationPlayer();
+                p1.movementPlayer(p1.actionPlayer);
+                p1.actionPlayer = input.nextLine();
+                p1.changeModePlayer(p1.actionPlayer);
+            }
+            
+            
+            
+        }
         
         
     }
     
 }
+
+
+
+
