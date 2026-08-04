@@ -19,21 +19,21 @@ class Player{
     float runSpeedPlayer = 400;
     boolean isRunningPlayer =  false;
     
-				  Player(String name, float speed){
-				      id++;
-				  	  this.idPlayer = id;
-				  	  this.namePlayer = name;
-				  	  this.speedPlayer = speed;
-				  }
+	Player(String name, float speed){
+		id++;
+	    this.idPlayer = id;
+		this.namePlayer = name;
+		this.speedPlayer = speed;
+	}
 				  
-				  void informationPlayer(){
-				      System.out.println("id: " + this.idPlayer);
-				      System.out.println("Name: " + this.namePlayer);
-				      System.out.println("Speed: " + this.speedPlayer);
-				      System.out.println("Is Running: " + this.isRunningPlayer);
-				      System.out.println("X: " + this.xPlayer); 
-				      System.out.println("Y: " + this.yPlayer);
-				  }
+	void informationPlayer(){
+        System.out.println("id: " + this.idPlayer);
+		System.out.println("Name: " + this.namePlayer);
+	    System.out.println("Speed: " + this.speedPlayer);
+		System.out.println("Is Running: " + this.isRunningPlayer);
+		System.out.println("X: " + this.xPlayer); 
+		System.out.println("Y: " + this.yPlayer);
+	}
     
     // method in game
     void runningPlayer(){
