@@ -7,7 +7,7 @@ class Player{
 	// attribute stadistic
     int idPlayer;
 	String namePlayer;
-	float speedPlayer;
+	
     
     int goldPlayer = 0;
     
@@ -15,20 +15,28 @@ class Player{
     boolean quitPlayer = false;
     
     // attribute in game
+    boolean isSecurityZonePlayer = false;
     
     int xPlayer = 0;
     int yPlayer = 0;
+    int widthPlayer = 100;
+    int heigthPlayer = 100;
+    
     
     int energyPlayer = 100;
-    float runSpeedPlayer = 400;
+    float speedPlayer = 4f;
+    float runSpeedPlayer = 400f;
     boolean isRunningPlayer =  false;
     
-	Player(String name, float speed){
+	Player(String name){
 		id++;
 		this.idPlayer = id;
 		this.namePlayer = name;
-		this.speedPlayer = speed;
 	}
+    
+    boolean playerIsQuit(String action){
+        if (action.equalsIgnoreCase("exit")){ this.quitPlayer = true; }
+    }
 				  
     void informationPlayer(){
         System.out.println("id: " + this.idPlayer);
