@@ -2,6 +2,7 @@
 import java.util.Scanner;
 
 
+
 public class Main{
             
     public static void main(String[] args){
@@ -19,7 +20,7 @@ public class Main{
                 player.changeModePlayer(player.actionPlayer);
                 
             }
-            if (player.roomPlayer.equals(Room.GAME)){
+            else if (player.roomPlayer.equals(Room.GAME)){
                 
                 player.informationPlayer();
                 player.movementPlayer(player.actionPlayer);
@@ -27,7 +28,12 @@ public class Main{
                 player.changeModePlayer(player.actionPlayer);
             }
             
-            
+            else if (player.roomPlayer.equals(Room.SHOP)){
+                System.out.println("The shop not ready disponible");
+                System.out.print("Chose your mode: ");
+                player.actionPlayer = input.nextLine();
+            }
+            else { player.roomPlayer = Room.MENU; }
             
         }
         
